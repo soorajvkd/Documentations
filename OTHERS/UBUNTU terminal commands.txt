@@ -1,0 +1,37 @@
+#to change into root user
+    sudo su
+
+#install python
+    apt-get install python python-dev libq-dev python-setuptools
+    
+#install postgresql database
+    apt-get install postgresql postgresql-contrib phppgadmin
+
+#installing pip
+    easy_install pip
+    
+#installing using pip
+    pip install virualenv virtualenvwrapper
+
+
+#To unHide menu bar of Sublime :
+    Ctrl + shift + p   =>   Search for Menu   =>   select view-Toggle menu
+
+#To configure git lab in computer :
+    git config --global user.name “Muhammed Yaseen P”
+    git config --global user.email “yaseen.talrop@gmail.com”
+
+
+#Extract .rar file
+    sudo apt-get install unrar
+    unrar x -r /home/talrop/Downloads/zip-files/arkboss.rar
+
+#To compress whole database into .sql file
+    pg_dump -h localhost -d <db name> -U <user name> -f <where to save path>
+    eg:
+        pg_dump -h localhost -d db_indograce -U indograce_demo -f /home/talrop/Downloads/database.sql
+
+#To load complete database (.sql file)
+    psql -h localhost -d <db name> -U <user name> -f <path to file>
+    eg:
+        psql -h localhost -d db_indograce -U indograce_demo -f /home/talrop/Downloads/database.sql
